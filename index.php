@@ -158,10 +158,10 @@ echo alert("Can't find the file " . basename($_POST['smtp']));
                 <select class="form-control" name="smtp" id="smtp" required="required">
                   <option></option>
                   <?php
-					foreach ($configs as $key => $file) {
-					echo '<option value="'  . basename($file)  . '">'  . basename($file)  . '</option>';
-					}
-					?>
+foreach ($configs as $key => $file) {
+echo '<option value="'  . basename($file)  . '">'  . basename($file)  . '</option>';
+}
+?>
                 </select>
               </div>
               <div class="row">
@@ -171,10 +171,10 @@ echo alert("Can't find the file " . basename($_POST['smtp']));
                     <select class="form-control" name="email" id="email" required="required">
                       <option></option>
                       <?php
-						foreach ($mails as $key => $file) {
-						echo '<option value="'  . basename($file)  . '">'  . basename($file)  . '</option>';
-						}
-						?>
+foreach ($mails as $key => $file) {
+echo '<option value="'  . basename($file)  . '">'  . basename($file)  . '</option>';
+}
+?>
                     </select>
                   </div>
                 </div>
@@ -199,4 +199,5 @@ echo alert("Can't find the file " . basename($_POST['smtp']));
         </div>
     </div>
   </body>
+
   </html>
