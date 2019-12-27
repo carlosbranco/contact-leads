@@ -114,7 +114,7 @@ $smtp_config['email'] = $smtp_config['username'];
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
 // Create a message
-$message = (new Swift_Message('Wonderful Subject'))
+$message = (new Swift_Message($_POST['subject']))
 ->setFrom([$smtp_config['email'] => $smtp_config['name']])
 ->setTo([$_POST['lead_email'] => $_POST['lead_name']])
 ->setBody($_POST['message'])
@@ -187,7 +187,7 @@ echo '<option value="'  . basename($file)  . '">'  . basename($file)  . '</optio
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="email" name="subject" class="form-control" id="subject" placeholder="Enter a subject" required="required">
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="Enter a subject" required="required">
               </div>
               <div class="form-group">
                 <label for="email">Message</label>
