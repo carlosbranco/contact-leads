@@ -18,12 +18,13 @@ port:465<br />
 protocol:ssl<br />
 
 <br />
-Other folder called mail where you gonna put .txt files with e-mails to spin.<br />
+<strong>Other folder called mail where you gonna put .txt files with e-mails to spin.</strong><br />
 Example of a file:<br /><br />
 {Hello|Hi} :name,<br />
 {I want to|I Would like to} {talk|have a conversation} with you.<br />
 {Thank you|Thank You very much}<br />
 <br />
-#Extra:
+
+# Extra:
 You can use the code :name inside the e-mail or the subject and when you click
 spin will replace that :name with the lead name.
