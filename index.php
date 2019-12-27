@@ -64,6 +64,10 @@ if( isset($_POST['spinner'])){
         function run() {
             let file = document.getElementById("email").value;
             let lead_name = document.getElementById("lead_name").value;
+            let subject = document.getElementById("subject").value;
+            subject = subject.replace(':name', lead_name);
+            document.getElementById("subject").value = subject;
+            
             $.ajax({
 			  method: "POST",
 			  url: "index.php",
@@ -180,6 +184,10 @@ if( isset($_POST['email']) && isset($_POST['smtp']) && !empty($_POST['smtp'])){
     	</div>
     </div>
     </div>
+      <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="email" name="subject" class="form-control" id="subject" placeholder="Enter a subject" required="required">
+  </div>
   <div class="form-group">
     <label for="email">Message</label>
 		<textarea id="message" name="message" class="form-control" rows="15"></textarea>
